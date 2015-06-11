@@ -1,0 +1,171 @@
+// -----------------------------------------
+// Scribe Template: CSS > Widgets > Sign Up Form
+// -----------------------------------------
+
+
+
+
+.widget__signupform {
+
+
+
+	// Legend
+	// ------------------------------
+
+
+	.legend {
+		font-family: @font-swatch2-font-family;
+		font-size: @font-swatch2-font-size;
+		line-height: @font-swatch2-line-height;
+		font-weight: @font-swatch2-font-weight;
+		color: @font-swatch2-color;
+		margin-bottom: 0.2em;
+
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch2-font-size, 0.8);
+			line-height: bkscale(@font-swatch2-line-height, 0.8);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch2-font-size, 0.7);
+			line-height: bkscale(@font-swatch2-line-height, 0.7);
+		}
+	}
+
+
+
+
+	// Form Body
+	// ------------------------------
+
+
+	.form-body {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-moz-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-align-content: flex-end;
+		-ms-flex-line-pack: flex-end;
+		align-content: flex-end;
+	}
+
+
+
+
+	// Form Group
+	// ------------------------------
+
+
+	.form-group {
+		margin-bottom: 0;
+		&:first-child {
+			-webkit-box-flex: 0;
+			-moz-box-flex: 0;
+			-webkit-flex: 1 1 auto;
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			margin-right: 10px;
+			@media @mobile {
+		    	margin-bottom: 10px;
+		    }
+		}
+
+	}
+
+	// Last Form Group
+
+	.form-group:last-of-type {
+		margin: 0;
+	}
+
+
+
+
+	// Label
+	// ------------------------------
+
+
+	.label {
+		display: none;
+
+	}
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+	// Legend
+
+	.widget__signupform .legend {
+		width: auto;
+		display: block;
+		float: none;
+		position: relative;
+		text-align: left;
+		padding: 0;
+		background: none;
+
+	}
+
+	// Form Body
+
+	.widget__signupform .form-body {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+}
+
+// 4 columns
+// ------------------------------
+
+
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth,
+.columns-three-left,
+.columns-three-right,
+.columns-three-middle {
+
+	// Form Body
+
+	.widget__signupform .form-body {
+		display: block;
+	}
+
+	// First Form Group
+
+	.widget__signupform .form-group:first-child {
+		margin-bottom: 10px;
+	}
+}

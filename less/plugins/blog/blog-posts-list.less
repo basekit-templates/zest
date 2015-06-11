@@ -1,0 +1,324 @@
+// ---------------------------------------------------
+// Scribe Template: CSS > Plugins > Blog > Blog Posts List
+// ---------------------------------------------------
+
+
+
+// ------------------------------
+// Blog Post List
+// ------------------------------
+
+
+.blogpostlist {
+
+
+
+
+
+    // Post Items
+    // ------------------------------
+
+
+    .post-items {
+    }
+
+
+
+
+    // Post Article
+    // ------------------------------
+
+
+    .post-article {
+        .clearfix;
+        clear: both;
+        @media @bp-global-large {
+            margin-bottom: 70px;
+        }
+        @media @bp-global-medium {
+            margin-bottom: 50px;
+        }
+        @media @bp-global-small {
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+
+    // Post Image
+    // ------------------------------
+
+    .post-image {
+        height: 0;
+        padding-bottom: 56%;
+        position: relative;
+        overflow: hidden;
+        top: 16px;
+    }
+
+        // Image Link
+
+        .image-link {
+            .animation;
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+
+            &:hover {
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+
+        // Image
+
+        .blogpostlist__image {
+            display: none;
+        }
+
+
+
+
+    // Post Content
+    // ------------------------------
+
+
+    .post-content {
+        margin: 0;
+        @media @bp-global-large {
+            margin: 0 40px;
+        }
+        @media @bp-global-medium {
+            margin: 0 20px;
+        }
+        @media @bp-global-small {
+            margin: 0 12px;
+        }
+
+
+    }
+
+
+
+    // Post Title
+
+    .post-title {
+        font-size: bkscale(@font-swatch1-font-size, 1);
+        line-height: bkscale(@font-swatch1-line-height, 1);
+        font-weight: @font-swatch1-font-weight;
+        position: relative;
+        margin-bottom: 1em;
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch1-font-size, 0.9);
+            line-height: bkscale(@font-swatch1-line-height, 0.9);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch1-font-size, 0.8);
+            line-height: bkscale(@font-swatch1-line-height, 0.8);
+            margin-bottom: 0.2em;
+        }
+    }
+
+        // Title Link
+
+        .title-link {
+            display: inline-block;
+            color: @color-swatch1;
+            color: @color-swatch1;
+            padding: 20px 30px;
+            background-color: fade(@color-swatch2, 80%);
+            line-height: inherit;
+            @media @bp-global-small {
+                padding: 15px 20px;
+            }
+        }
+
+
+    // Post Excerpt
+
+    .post-excerpt {
+        @media @bp-global-large {
+            padding: 0 30px;
+        }
+
+        p {
+            @media @bp-global-medium {
+                font-size: bkscale(@font-swatch5-font-size, 0.9);
+                line-height: bkscale(@font-swatch5-line-height, 0.9);
+            }
+            @media @bp-global-small {
+                font-size: bkscale(@font-swatch5-font-size, 0.8);
+                line-height: bkscale(@font-swatch5-line-height, 0.8);
+            }
+        }
+    }
+
+
+
+    // Read more
+
+    .read-more {
+        display: inline-block;
+        float: left;
+        font-size: @font-swatch7-font-size;
+        font-family: @font-swatch7-font-family;
+        font-weight: @font-swatch7-font-weight;
+        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+        display: inline-block;
+        line-height: 1.8;
+        margin-top: 16px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        @media @bp-global-small {
+            margin-top: 0;
+        }
+
+        &:hover {
+            box-shadow: inset 0px -2px 0px 0px @color-swatch2, 0px 0px 0px 9px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
+        }
+    }
+
+
+
+
+    // Post Footer
+    // ------------------------------
+
+
+    .post-footer {
+
+        // Time
+
+        .timestamp {
+            float: right;
+            padding-top: 16px;
+            color: fade(@color-swatch5, 50%);
+            display: inline-block;
+            line-height: 1.5;
+
+
+            @media @bp-global-large {
+                font-size: 14px;
+                margin: 0 70px 0 0;
+            }
+            @media @bp-global-medium {
+                font-size: 13px;
+                margin: 0 30px 0 0;
+            }
+            @media @bp-global-small {
+                font-size: 12px;
+                margin: 0 15px 0 0;
+                padding-top: 0;
+            }
+
+            // Icon
+
+            &:before {
+                font-family: 'FontAwesome', sans-serif;
+                content: "\f133";
+                margin-right: 10px;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // Blog Post List
+
+    .blogpostlist {
+
+        // Post Article
+
+        .post-article {
+            width: 50%;
+        }
+
+        // Post Content
+
+        .post-content {
+            padding-bottom: 1em;
+        }
+
+        // Timestamp
+
+        .post-footer .timestamp {
+            position: relative;
+            display: block;
+        }
+
+        // Read more
+
+        .read-more {
+            position: relative;
+            margin: 0;
+        }
+    }
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+        .post-items {
+
+            display: block;
+
+            // Post Article
+
+            .post-article {
+                width: auto;
+                background-color: transparent !important;
+            }
+
+            // Post Content
+
+            .post-content {
+                padding: 1em 0;
+            }
+
+            // Timestamp
+
+            .post-footer .timestamp {
+                padding: 0 0 2em 0;
+            }
+        }
+    }
+}

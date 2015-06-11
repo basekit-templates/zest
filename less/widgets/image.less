@@ -1,0 +1,133 @@
+// ---------------------------------------------
+// Scribe Template: CSS > Widgets > Image Widget
+// ---------------------------------------------
+
+
+
+
+// Image Caption
+// ------------------------------
+
+
+.imagewidget__caption {
+    margin: 0;
+    position: relative;
+    top: -0.9em;
+}
+
+
+// Image Title
+// ------------------------------
+
+
+.imagewidget .image-title {
+    display: inline-block;
+    font-family: @font-swatch1-font-family;
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    background-color: fade(@color-swatch2, 80%);
+    color: @color-swatch1;
+    padding: 0.3em 14px;
+
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch4-font-size, 0.9);
+        line-height: bkscale(@font-swatch4-line-height, 0.9);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch4-font-size, 0.7);
+        line-height: bkscale(@font-swatch4-line-height, 0.7);
+    }
+}
+
+
+
+
+// Image Description
+// ------------------------------
+
+
+.imagewidget .image-description {
+    font-size: bkscale(@font-swatch5-font-size, 0.85);
+    line-height: bkscale(@font-swatch5-line-height, 0.85);
+    font-family: @font-swatch1-font-family;
+    padding-top: 0.5em;
+
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch5-font-size, 0.75);
+        line-height: bkscale(@font-swatch5-line-height, 0.75);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch5-font-size, 0.6);
+        line-height: bkscale(@font-swatch5-line-height, 0.6);
+    }
+}
+
+
+
+
+// Align Left
+// ------------------------------
+
+
+.imagewidget.widget-align-left {
+    &, .caption {
+        text-align: left;
+    }
+
+    .caption, .image-link {
+        float: left;
+    }
+
+    .image-description {
+        background-color:  darken(fade(@color-swatch1, 90%), 3%);
+        padding: 0.3em 14px;
+    }
+
+    .caption {
+        top: 1em;
+        left: -0.7em;
+    }
+}
+
+
+
+
+// Align Right
+// ------------------------------
+
+
+.imagewidget.widget-align-right {
+    &, .caption {
+        text-align: right;
+    }
+
+    .caption, .image-link {
+        float: right;
+    }
+
+    .image-description {
+        background-color:  darken(fade(@color-swatch1, 90%), 3%);
+        padding: 0.3em 14px;
+    }
+
+    .caption {
+        top: 1em;
+        right: -0.7em;
+    }
+}
+
+
+
+
+// Align Center
+// ------------------------------
+
+
+.imagewidget.widget-align-center {
+    &, .caption {
+        text-align: center;
+    }
+}

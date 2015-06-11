@@ -1,0 +1,50 @@
+// ---------------------------------
+// Scribe Template: CSS > Widgets > Logo
+// ---------------------------------
+
+
+
+
+// Logo
+// ------------------------------
+
+
+.logo {
+    margin: 0;
+    @media @bp-global-medium {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+// Logo, Logo Link
+// ------------------------------
+
+
+.logo, .logo-link {
+    // Removes space around inline elements
+    line-height: 0;
+}
+
+
+
+
+// Logo Image
+// ------------------------------
+
+
+.logo-image {
+    // Restricting maximum image size
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+
+    @media @bp-global-small {
+        max-height: 100px;
+    }
+}

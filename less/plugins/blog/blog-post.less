@@ -1,0 +1,303 @@
+// ---------------------------------------------
+// Scribe Template: CSS > Plugins > Blog > Blog Post
+// ---------------------------------------------
+
+
+@bp-blog-post-layout-vertical: ~"only screen and (max-width : 900px)";
+
+
+// ------------------------------
+// Blog Post
+// ------------------------------
+
+.blogpost {
+
+
+    // Blog Article
+    // ------------------------------
+    .post-article {
+        position: relative;
+    }
+
+
+
+
+    // Post Image
+    // ------------------------------
+
+
+    .post-image {
+        position: relative;
+        top: 16px;
+    }
+
+
+
+
+        // Image Link
+        // ------------------------------
+
+
+        .image-link {
+            display: block;
+
+            // Container Width * 0.66
+            height: 0;
+            padding-bottom: 56%;
+
+            background-position: center center;
+            background-size: cover;
+
+            .image {
+                display: none;
+            }
+        }
+
+
+
+
+    // Post Content
+    // ------------------------------
+
+
+    .post-content {
+        margin: 0 0 2em 0;
+        padding: 0;
+    }
+
+
+
+
+    // Post Excerpt / Post Body
+    // ------------------------------
+
+
+    .post-body {
+
+    }
+
+
+
+
+    // Post Header
+    // ------------------------------
+
+
+    .post-header {
+        margin-left: 20px;
+    }
+
+
+
+
+        // Post Title
+        // ------------------------------
+
+
+        .post-title {
+            font-size: bkscale(@font-swatch1-font-size, 1);
+            line-height: bkscale(@font-swatch1-line-height, 1);
+            font-weight: @font-swatch1-font-weight;
+            position: relative;
+            margin-bottom: 1em;
+            display: inline-block;
+            color: @color-swatch1;
+            color: @color-swatch1;
+            padding: 20px 30px;
+            background-color: fade(@color-swatch2, 80%);
+            line-height: inherit;
+
+            @media @bp-global-medium {
+                font-size: bkscale(@font-swatch1-font-size, 0.9);
+                line-height: bkscale(@font-swatch1-line-height, 0.9);
+            }
+            @media @bp-global-small {
+                font-size: bkscale(@font-swatch1-font-size, 0.8);
+                line-height: bkscale(@font-swatch1-line-height, 0.8);
+                padding: 15px 20px;
+            }
+        }
+
+
+
+
+    // Post Footer
+    // ------------------------------
+
+
+    .post-footer {
+
+
+
+
+        // Timestamp
+
+        .timestamp {
+            color: fade(@font-swatch5-color, 80%);
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 2em 0 0;
+            font-size: @font-swatch7-font-size;
+            font-family: @font-swatch7-font-family;
+            font-weight: @font-swatch7-font-weight;
+
+            // Icon
+
+            &:before {
+                font-family: 'FontAwesome', sans-serif;
+                content: "\f133";
+                display: block;
+                font-size: 14px;
+                margin-bottom: 16px;
+                color: fade(@font-swatch5-color, 40%);
+            }
+        }
+    }
+
+
+
+
+    // Post Attributes
+    // ------------------------------
+
+
+    .post-attributes {
+        display: inline-block;
+        margin: 0;
+    }
+
+
+
+
+    // Post Category / Post Tags
+    // ------------------------------
+
+
+    .post-category, .post-tags {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 2em;
+
+        @media @bp-global-medium {
+            margin-bottom: 1em;
+        }
+
+        @media @bp-global-small {
+            margin-bottom: 1em;
+        }
+
+        // Links
+
+        a {
+            font-size: @font-swatch7-font-size;
+            font-family: @font-swatch7-font-family;
+            font-weight: @font-swatch7-font-weight;
+
+            box-shadow: inset 0px -1px 0px 0px @color-swatch2;
+            display: inline-block;
+            line-height: 1.8;
+            margin-top: 0.5em;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
+                background-color: fade(@color-swatch2, 7%);
+            }
+
+
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+
+
+    // Post Category
+    // ------------------------------
+
+
+    .post-category {
+        margin-right: 2em;
+    }
+
+
+
+
+    // Category Title / Tags Title
+    // ------------------------------
+
+
+    .blogpost__category-title,
+    .blogpost__tags-title {
+        font-size: 13px;
+        line-height: 1;
+        color: fade(@font-swatch5-color, 40%);
+        display: block;
+        padding-bottom: 0.5em;
+    }
+
+
+
+
+    // Tags List
+    // ------------------------------
+
+
+    .blogpost__tag-list {
+        display: block;
+    }
+
+
+
+
+    // Tags Item
+    // ------------------------------
+
+
+    .blogpost__tag-item {
+        margin-right: 1.5em;
+
+
+    }
+
+
+
+
+
+
+    // ------------------------------
+    // Sharing Links
+    // ------------------------------
+
+
+
+
+    // Sharing Links
+    // ------------------------------
+
+
+    .blogpost__sharing-links {
+        clear: both;
+    }
+
+    // Network Item
+
+    .blogpost__network-item {
+        @media @bp-global-medium, @bp-global-small {
+            display: block;
+        }
+
+
+
+
+        .button {
+
+
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "name":"Zest",
+    "widgetVersion": 2,
+    "thumbnail":"zest.png",
+    "templateType":"ecommerce",
+    "pageTypes": ["home"],
+    "screenshot":"zest-screenshot.jpg",
+    "tags": {
+    "en": ["business", "corporate", "company", "corporation", "professional"],
+    "es": ["negocios", "corporativo", "empresa", "corporativo", "profesional"],
+    "br": ["negócio", "corporativo", "companhia", "corporação", "eleição", "profissional"]
+    },
+     "images":[
+        "images/feature-bg.jpg",
+        "images/logo.png"
+    ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#DD0565",
+            "color3":"#F7F7F7",
+            "color4":"#DD0565",
+            "color5":"#555250",
+            "color6":"#000000",
+            "color7":"#9AA7B5"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#D2EFE3",
+            "color3":"#494949",
+            "color4":"#424D51",
+            "color5":"#424D51",
+            "color6":"#ffffff",
+            "color7":"#D5AAA2"
+        },
+        "Swatch 3": {
+            "color1":"#F6F4EC",
+            "color2":"#EBE5D2",
+            "color3":"#CC3043",
+            "color4":"#3A3936",
+            "color5":"#3A3936",
+            "color6":"#ffffff",
+            "color7":"#CC3043"
+        },
+        "Swatch 4": {
+            "color1":"#2A2A2A",
+            "color2":"#CC3043",
+            "color3":"#48E9FF",
+            "color4":"#ffffff",
+            "color5":"#ffffff",
+            "color6":"#ffffff",
+            "color7":"#9AA7B5"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#FAFAFA",
+            "color3":"#494949",
+            "color4":"#464646",
+            "color5":"#464646",
+            "color6":"#ffffff",
+            "color7":"#737373"
+        }
+    },
+    "fontSwatch": {
+       "title": "Droid Sans",
+        "font1": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "700",
+            "line-height": "33px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "22px",
+            "font-weight": "700",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "19px",
+            "font-weight": "700",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "17px",
+            "font-weight": "700",
+            "line-height": "24px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "17px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "20px",
+            "font-weight": "700",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,8%)"
+        },
+        "font7": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "700",
+            "line-height": "27px",
+            "color": "@color-swatch5",
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "32px",
+            "font-weight": "7400",
+            "line-height": "37px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "20px",
+            "font-weight": "700",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "26px",
+            "font-weight": "700",
+            "line-height": "36px",
+            "color": "@color-swatch2",
+            "letter-spacing": "4px"
+        }
+    }
+}

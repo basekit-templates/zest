@@ -1,0 +1,183 @@
+// ---------------------------------------------------
+// Scribe Template: CSS > Widgets > Pagination (component)
+// ---------------------------------------------------
+
+
+
+
+// Pagination List
+// ------------------------------
+
+
+.pagination-list:not(.responsiveslideshow__pagination-list) {
+    .clearfix;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    clear: both;
+    margin-bottom: 0;
+    position: relative;
+    margin-top: -1px;
+
+
+
+
+
+
+
+    // Pagination Button
+    // ------------------------------
+
+
+    .button--pagination {
+        background: transparent;
+        color: @color-swatch6;
+        font-family: @font-swatch7-font-family;
+        font-size: @font-swatch5-font-size;
+        line-height: 1;
+        display: block;
+        box-shadow: none;
+        text-align: center;
+        padding: 0;
+
+        &:hover {
+            background-color: fade(@color-swatch2, 7%);
+        }
+
+
+
+
+        // Pagination Icons
+        // ------------------------------
+
+
+        &:before, &:after {
+            display: inline-block;
+            color: @color-swatch6;
+            text-align: center;
+            font-size: 3em;
+            vertical-align: middle;
+            background-color: transparent;
+            position: relative;
+            width: auto;
+            position: relative;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            left: 0;
+            right: 0;
+
+            @media @mobile {
+                font-size: 2em;
+            }
+        }
+    }
+
+
+    // Previous Button Icon
+
+
+    .icon--previous:before {
+        content: '\f104';
+        margin-right: 0;
+    }
+
+    .icon--previous:hover:before {
+        left: 12px;
+    }
+
+
+    // Next Button Icon
+
+
+    .icon--next:after {
+        content: '\f105';
+        margin-left: 0;
+    }
+
+    .icon--next:hover:after {
+        right: 12px;
+        left: auto;
+    }
+
+    // Control Text
+
+    .control-text {
+        font-size: @font-swatch7-font-size;
+        font-family: @font-swatch7-font-family;
+        font-weight: @font-swatch7-font-weight;
+        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+        display: inline-block;
+        line-height: 1.8;
+        margin: 0 26px;
+
+        @media @bp-global-small {
+            margin: 0 16px;
+        }
+
+        &:hover {
+            box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+        }
+    }
+
+    // Button Next
+
+    .button--next {
+        float: right;
+        text-align: right;
+    }
+
+    // Button Previous
+
+
+    .button--previous {
+        float: left;
+        text-align: left;
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+
+
+    .button--pagination:not(.icon) {
+
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+    .pagination-item {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        &:not(.blogpostlist__pagination-item) {
+            @media @bp-global-small {
+                -webkit-flex: 0 1 50%;
+                -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
+                width: 50%;
+            }
+        }
+    }
+
+    .pagination-item.current {
+        -webkit-flex: 2 1 auto;
+        -ms-flex: 2 1 auto;
+        flex: 2 1 auto;
+        @media @bp-global-small {
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
+        .button--pagination {
+            background: @color-swatch2;
+            color: @font-swatch5-color;
+        }
+    }
+}

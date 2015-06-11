@@ -1,0 +1,47 @@
+// ----------------------------------------------------------
+// Scribe Template: CSS > Plugins > Ecommerce > Featured Products
+// ----------------------------------------------------------
+
+
+
+
+// Featured Product Listing Title
+// -------------------------------
+
+
+.ecomfeaturedproducts__listing-title {
+    background-color: @color-swatch2;
+    font-family: @font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    color: @font-swatch5-color;
+
+    @media @bp-global-large {
+         padding: 26px 70px;
+    }
+
+    @media @bp-global-medium {
+        padding: 26px 40px;
+        font-size: bkscale(@font-swatch2-font-size, 0.8);
+        line-height: bkscale(@font-swatch2-line-height, 0.8);
+    }
+
+    @media @bp-global-small {
+        padding:  20px;
+        font-size: bkscale(@font-swatch2-font-size, 0.7);
+        line-height: bkscale(@font-swatch2-line-height, 0.7);
+    }
+}
+
+
+
+// Columns variations
+// ---------------------------------
+
+
+.responsivecolumns {
+    .ecomfeaturedproducts__listing-title {
+        background-color: transparent;
+        padding: 0 0 1em 0;
+    }
+}
+

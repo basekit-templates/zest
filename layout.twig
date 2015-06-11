@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html class="no-js" lang="{{ page.seoLang }}">
+
+	{% include "includes/head.twig" %}
+
+	<body class="{{ page.backgroundClass }}">
+
+
+
+		{% include "includes/header.twig" %}
+
+
+
+		<div class="template-content">
+			<div class="container">
+			{% if plugins.ecommerce.store.live %}
+				<div class="ecommerce-bar">
+					<div class="container">
+						<div class="template-search">Search</div>
+						<div class="template-basket">{{widget('ecombasket', 'shopbasket', {})|raw}}</div>
+					</div>
+				</div>
+				{% endif %}
+				{% block content %}
+				{% endblock %}
+				{% include "includes/footer.twig" %}
+			</div>
+		</div>
+
+
+
+	    {% include basekit.bodyScript %}
+
+		<script src="{{ asset('js/navigation.js')}}"></script>
+		<script src="{{ asset('js/custom.js')}}"></script>
+
+	</body>
+
+</html>

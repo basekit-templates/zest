@@ -1,0 +1,400 @@
+// -----------------------------
+// Scribe Template: CSS > Widgets > Content Widget
+// -----------------------------
+
+
+
+
+.content, .post-body {
+
+	// H1
+	// ------------------------------
+
+
+	h1 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch1-font-size, 0.9);
+			line-height: bkscale(@font-swatch1-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch1-font-size, 0.8);
+			line-height: bkscale(@font-swatch1-line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H2
+	// ------------------------------
+
+
+	h2 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch2-font-size, 0.9);
+			line-height: bkscale(@font-swatch2-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch2-font-size, 0.8);
+			line-height: bkscale(@font-swatch2-line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H3
+	// ------------------------------
+
+
+	h3 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch3-font-size, 0.9);
+			line-height: bkscale(@font-swatch3-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch3-font-size, 0.8);
+			line-height: bkscale(@font-swatch3-line-height, 0.8);
+		}
+	}
+
+
+
+
+	// H4
+	// ------------------------------
+
+
+	h4 {
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch4-font-size, 0.9);
+			line-height: bkscale(@font-swatch4-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch4-font-size, 0.8);
+			line-height: bkscale(@font-swatch4-line-height, 0.8);
+		}
+	}
+
+
+
+
+	// Paragraph and Strings
+	// ------------------------------
+
+
+	p, &  {
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			line-height: bkscale(@font-swatch5-line-height, 0.8);
+		}
+	}
+
+
+
+
+	// Link
+	// ------------------------------
+
+
+	a {
+		box-shadow: inset 0px -1px 0px 0px @color-swatch2;
+		display: inline-block;
+		line-height: 1.5;
+		&:hover {
+			text-decoration: none;
+			color: @color-swatch2;
+			box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+		}
+	}
+
+
+
+
+	// Unordered List
+	// ------------------------------
+
+
+	ul {
+		margin: 0 0 0 1.2em;
+		padding: 0;
+
+		li {
+			padding: 0 0 0 0.5em;
+			margin: 0 0 1em 0;
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+
+			@media @bp-global-medium {
+				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				line-height: bkscale(@font-swatch5-line-height, 0.8);
+			}
+
+			@media @bp-global-small {
+				font-size: bkscale(@font-swatch5-font-size, 0.7);
+				line-height: bkscale(@font-swatch5-line-height, 0.7);
+				padding-left: 0;
+			}
+		}
+	}
+
+
+
+	// Ordered List
+	// ------------------------------
+
+
+	ol {
+		margin: 1em 0;
+		padding-left: 0;
+		counter-reset: ordered-counter;
+		li {
+			position: relative;
+			padding-left: 3em;
+			margin-bottom: 1em;
+			list-style-type: none;
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+
+			@media @bp-global-medium {
+				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				line-height: bkscale(@font-swatch5-line-height, 0.8);
+			}
+
+			@media @bp-global-small {
+				font-size: bkscale(@font-swatch5-font-size, 0.7);
+				line-height: bkscale(@font-swatch5-line-height, 0.7);
+				padding-left: 2.5em;
+			}
+
+			// Custom Numbers
+
+			&:before {
+				min-width: 26px;
+				padding: 0 0.4em 0 0;
+				display: inline-block;
+				left: 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				border-right: 1px solid fade(@font-swatch5-color, 20%);
+				font-family: @font-swatch1-font-family;
+				content: counter(ordered-counter);
+				counter-increment: ordered-counter;
+				text-align: left;
+				color: @font-swatch1-color;
+				font-weight: bold;
+			}
+		}
+	}
+
+
+
+
+	// Block Quote
+	// ------------------------------
+
+
+	blockquote {
+		position: relative;
+		font-family: @font-swatch1-font-family;
+		font-weight: bold;
+		font-size: @font-swatch4-font-size;
+		line-height: @font-swatch4-line-height;
+		margin: 2.4em auto;
+		padding: 0.25em 0 0.25em 60px;
+
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch4-font-size, 0.9);
+			line-height: bkscale(@font-swatch4-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch4-font-size, 0.8);
+			line-height: bkscale(@font-swatch4-line-height, 0.8);
+			width: auto;
+			padding: 1.2em 30px;
+		}
+
+		&:before {
+			font-family: 'FontAwesome', sans-serif;
+			content: "\f10d";
+			background-color: @color-swatch2;
+			color: @color-swatch1;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 40px;
+			text-align: center;
+			padding-top: 0.25em;
+			font-size: 16px;
+		}
+
+	}
+
+
+
+
+	// Pre
+	// ------------------------------
+
+
+	pre {
+		display: block;
+		margin: 1em 0;
+		padding: 1em;
+		border: none;
+		border-radius: 0;
+		background-color: fade(@color-swatch5, 10%);
+		overflow: auto;
+		color: @font-swatch5-color;
+	}
+
+
+
+
+	// Code
+	// ------------------------------
+
+
+	code {
+		font-size: 0.9em;
+		background-color: transparent;
+		color: @font-swatch5-color;
+	}
+
+
+
+
+	// Table
+	// ------------------------------
+
+
+
+	table {
+		overflow: auto;
+		width: 100%;
+		border: none;
+		border-collapse: separate;
+	  	border-spacing: 2px;
+	  	margin: 2em 0;
+
+		@media @bp-global-medium {
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: bkscale(@font-swatch5-line-height, 0.9);
+		}
+
+		@media @bp-global-small {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			line-height: bkscale(@font-swatch5-line-height, 0.8);
+		}
+	}
+
+	// Table Cell
+
+	td, th {
+		border: none;
+		background-color: lighten(desaturate(@color-swatch2, 80%), 14%);
+		color: @font-swatch5-color;
+	}
+
+	// Thead
+
+	table thead td {
+		background-color: @color-swatch2;
+	}
+
+
+
+
+	// Horizontal Rule
+	// ------------------------------
+
+
+	hr {
+		height: 5px;
+		background-color: @color-swatch2;
+		border: none;
+		margin: 2em 0;
+
+		@media @bp-global-medium {
+		    height: 3px;
+		}
+
+		@media @bp-global-small {
+		    height: 1px;
+		}
+	}
+}
+
+
+
+
+// More, Less Button
+// ------------------------------
+
+
+.button--expand {
+	line-height: bkscale(@font-swatch7-font-size, 2);
+	font-size:  bkscale(@font-swatch7-font-size, 0.8);
+}
+
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		// Blockquote
+
+		.content blockquote {
+			width: 100%;
+		}
+
+
+		// 4 columns
+		// ------------------------------
+
+
+		.columns-four-first,
+		.columns-four-second,
+		.columns-four-third,
+		.columns-four-fourth {
+
+			// Blockquote
+
+			.content blockquote {
+				padding-right: 0;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
