@@ -1,5 +1,5 @@
 // ------------------------------
-// Scribe Template: CSS > Theme
+// Zest Template: CSS > Theme
 // ------------------------------
 
 // 1. #Global Breakpoints
@@ -28,14 +28,7 @@
 
 
 
-// ------------------------------
-// 2. #Color Swatches
-// ------------------------------
 
-
-@color-swatch2-alt: darken(desaturate(@color-swatch2, 10%), 5%);
-@color-swatch7-alt: lighten(saturate(@color-swatch7, 1%), 4%);
-@color-swatch7-hover: darken(@color-swatch7, 10%);
 
 
 
@@ -106,13 +99,46 @@
 
 
 .ecommerce-bar {
-
+    @media @bp-global-small {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: fade(@color-swatch1, 50%);
+        z-index: 900;
+        height: 47px;
+        overflow: hidden;
+        padding-right: 47px;
+        border-bottom: 1px solid black;
+    }
 
     .container {
 
     }
 }
 
+
+
+// ------------------------------
+// x. #Page Title
+// ------------------------------
+
+
+.pagetitle-text {
+    color: @color-swatch5;
+    line-height: 1.4;
+
+    @media @bp-global-large {
+        font-size: 34px;
+        margin-bottom: 1em;
+    }
+    @media @bp-global-medium {
+        font-size: 28px;
+    }
+    @media @bp-global-small {
+        font-size: 22px;
+    }
+}
 
 
 
@@ -181,6 +207,10 @@
 
     box-shadow: inset -2px 0px 0px 0px darken(@color-swatch1, 6%);
 
+    @media @bp-global-small {
+        box-shadow: none;
+    }
+
     // Container
 
 	.container {
@@ -222,7 +252,8 @@
 
         @media @bp-global-small {
             position: relative;
-            padding: 15px 0 0 15px;
+            padding: 62px 0 0 15px;
+            display: block;
         }
 
         > * {
@@ -252,12 +283,6 @@
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-
-        @media @bp-global-small {
-            -webkit-order: 1;
-            -ms-flex-order: 1;
-            order: 1;
-        }
     }
 
     // Template Logo
@@ -285,21 +310,13 @@
         margin: auto 26px 40px 0;
 
         @media @bp-global-small {
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
+            margin: 0;
         }
     }
 
     // Profile Widget
 
     .template-profile {
-        @media @bp-global-small {
-            -webkit-order: 2;
-            -ms-flex-order: 2;
-            order: 2;
-        }
-
         .widget {
             margin-bottom: 34px;
         }

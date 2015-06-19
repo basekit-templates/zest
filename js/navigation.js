@@ -4,7 +4,7 @@ $( ".widget__extendednavigation" ).addClass( "closed" );
 $( ".extendednavigation__navigation-toggle" ).click(function() {
 	$( ".widget__extendednavigation" ).toggleClass( "open" ).toggleClass( "closed" );
 
-    $( ".page-content" ).toggleClass( "navigation--open" );
+    $( "body" ).toggleClass( "navigation--open" );
 });
 
 // Togglse class open to display/hide folders

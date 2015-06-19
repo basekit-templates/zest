@@ -1,5 +1,5 @@
 // ------------------------------------
-// Scribe Template: CSS > Plugin: Ecommerce
+// Zest Template: CSS > Plugin: Ecommerce
 // ------------------------------------
 
 
@@ -78,15 +78,21 @@
 
 
 .category-list-body h3 {
-    font-size: bkscale(@font-swatch2-font-size, 1);
-    line-height: bkscale(@font-swatch2-line-height, 1);
-    @media @tablet {
+    font-family: @font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    line-height: @font-swatch2-line-height;
+    font-weight: @font-swatch2-font-weight;
+    color: @font-swatch2-color;
+    margin-bottom: 0.2em;
+
+    @media @bp-global-medium {
         font-size: bkscale(@font-swatch2-font-size, 0.8);
         line-height: bkscale(@font-swatch2-line-height, 0.8);
     }
-    @media @mobile {
-        font-size: bkscale(@font-swatch2-font-size, 0.6);
-        line-height: bkscale(@font-swatch2-line-height, 0.6);
+
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch2-font-size, 0.7);
+        line-height: bkscale(@font-swatch2-line-height, 0.7);
     }
 }
 
@@ -109,45 +115,8 @@
 
 
 .ecomcategorieslist__category-item {
-    float: left;
-    list-style: none;
-
-    // 3 Columns Layout
-
-    @media @bp-global-large {
-        width: 32.5%;
-        margin: 0 1.25% 1.25% 0;
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
-        &:nth-child(4n) {
-            clear: left;
-        }
-    }
-
-
-    // 2 Columns Layout
-
-    @media @bp-global-medium {
-        width: 49%;
-        margin: 0 2% 2% 0;
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-        &:nth-child(3n) {
-            clear: left;
-        }
-    }
-
-
-    // 1 Column Layout
-
-   @media @bp-global-small {
-        width: 100%;
-        height: auto;
-        margin: 0 0 2% 0;
-    }
-
+    display: inline-block;
+    margin: 0 1em 0.5em 0;
 
 
 
@@ -156,8 +125,22 @@
 
 
     a {
-        .underline;
-        display: block;
+        font-size: @font-swatch7-font-size;
+        font-family: @font-swatch7-font-family;
+        font-weight: @font-swatch7-font-weight;
+        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
+        display: inline-block;
+        line-height: 1.8;
+        margin-top: 0.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
+        }
     }
 
 
@@ -168,80 +151,9 @@
 
 
     .item-count {
-        float: right;
-        opacity: 0.5;
+        margin-left: 0.5em;
+        color: fade(@font-swatch5-color, 50%);
     }
 }
 
-
-// Columns variations
-// ---------------------------------
-
-
-@media @bp-global-columns {
-
-
-
-
-    // All Columns
-    // ------------------------------
-
-
-    .responsivecolumns {
-
-        .ecomcategorieslist__category-item .item-count {
-            float: none;
-        }
-
-        // Link
-        // ------------------------------
-
-
-        a {
-            display: inline-block;
-        }
-
-
-    }
-
-    // 3 and 4 columns
-    // ------------------------------
-
-
-    .columns-four-first,
-    .columns-four-second,
-    .columns-four-third,
-    .columns-four-fourth,
-    .columns-three-left,
-    .columns-three-right,
-    .columns-three-middle {
-        .ecomcategorieslist__category-item {
-            width: 49%;
-            margin: 0 2% 2% 0;
-            &:nth-child(2n) {
-                margin-right: 0;
-            }
-            &:nth-child(3n) {
-                clear: left;
-            }
-            &:nth-child(4n) {
-                clear: none;
-            }
-
-        }
-    }
-
-    // 4 columns
-    // ------------------------------
-    .columns-four-first,
-    .columns-four-second,
-    .columns-four-third,
-    .columns-four-fourth {
-        .ecomcategorieslist__category-item {
-            width: auto;
-            float: none;
-            margin-right: 0;
-        }
-    }
-}
 

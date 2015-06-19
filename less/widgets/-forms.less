@@ -1,5 +1,5 @@
 // ----------------------------------------------
-// Scribe Template: CSS > Widgets > Forms (component)
+// Zest Template: CSS > Widgets > Forms (component)
 // ----------------------------------------------
 
 
@@ -151,10 +151,10 @@ textarea {
 
 .select-wrap {
     position: relative;
-    box-shadow: inset 0px -1px 0px 0px @font-swatch5-color;;
+    box-shadow: inset 0px -2px 0px 0px fade(@font-swatch5-color, 20%);
 
     &:hover {
-        box-shadow: inset 0px -2px 0px 0px @font-swatch5-color;;
+        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
     }
 
 
@@ -168,12 +168,16 @@ textarea {
         line-height: 1em;
         text-align: center;
         font-size: 20px;
-        color: @font-swatch5-color;
+        color: fade(@font-swatch5-color, 30%);
         position: absolute;
         right: 0;
         top: 50%;
         margin-top: -0.5em;
         z-index: 900;
+    }
+
+    &:hover:after {
+        color: @color-swatch2;
     }
 }
 
@@ -185,7 +189,6 @@ textarea {
 .select {
     border: none;
     color: @font-swatch5-color;
-    font-size: bkscale(@font-swatch5-font-size, 0.9);
     border-radius: 0;
     background-color: transparent;
     -webkit-appearance: none;
@@ -194,13 +197,16 @@ textarea {
     display: block;
     width: 100%;
     position: relative;
-    z-index: 1000;
+    // z-index: 1000;
+    font-family:  @font-swatch7-font-family;
+    font-size:  @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
 
     @media @bp-global-medium {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-size: bkscale(@font-swatch7-font-size, 0.8);
     }
     @media @bp-global-small {
-        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        font-size: bkscale(@font-swatch7-font-size, 0.7);
     }
 
     &:hover, &:focus {
