@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"zest.png",
     "templateType":"ecommerce",
-    "pageTypes": ["home", "ecomproductslist"],
+    "pageTypes": ["home"],
     "screenshot":"zest-screenshot.jpg",
     "tags": {
     "en": ["business", "corporate", "company", "corporation", "professional"],

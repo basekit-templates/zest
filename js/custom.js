@@ -161,23 +161,7 @@ $(document).ready(function() {
        $(".ecomproduct__product-image").addClass("one-image");
     }
 
-    // Next Button for ecom gallery
-    $('.product-gallery').each(function() {
-      var max = 5;
-      if ($(this).find("li.gallery-item").length > max) {
-        $(this).addClass("hiding");
 
-        $(this)
-            .find('li.gallery-item:gt('+max+')')
-            .hide()
-            .end()
-            .append(
-                $('<li class="ecom-view-more" id="ecomscroll" href="#">&gt;</li>').click( function(){
-                $(this).siblings(':hidden').show().end();
-            })
-            );
-      }
-    });
 
     // Ecom Gallery Scrolling
 
