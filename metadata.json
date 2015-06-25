@@ -127,17 +127,17 @@
         },
         "font8": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "32px",
+            "font-size": "30px",
             "font-weight": "7400",
-            "line-height": "37px",
+            "line-height": "35px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
         "font9": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "20px",
+            "font-size": "18px",
             "font-weight": "700",
-            "line-height": "25px",
+            "line-height": "23px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },

@@ -36,6 +36,7 @@
 
 
 
+
 // Product Images
 // ------------------------------
 
@@ -43,10 +44,6 @@
 .product-images {
 
 }
-
-
-
-
 
 
 
@@ -61,6 +58,20 @@
     &.no-image {
         display: none;
     }
+
+    .product--one-image & {
+        display: block;
+        height: 0;
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 60%;
+        position: relative;
+
+        @media @bp-global-small {
+            width: 70%;
+            padding-bottom: 70%;
+        }
+    }
 }
 
 
@@ -71,24 +82,17 @@
 
 
 .product-image .image-link {
+    position: absolute;
     display: block;
-    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position:  center;
     background-size: contain;
-    background-position: center;
+    box-shadow: 0px 11px 30px 0px rgba(213,213,213,0.18), inset 0px 0px 0px 1px rgba(0,0,0,0.05);
+    height: 100%;
     background-color: #fff;
-
-    @media @bp-global-large {
-        padding: 26px;
-        height: 560px;
-    }
-    @media @bp-global-medium {
-        padding: 20px;
-        height: 400px;
-    }
-    @media @bp-global-small {
-        padding: 10px;
-        height: 200px;
-    }
 }
 
 // Image
@@ -195,6 +199,7 @@
     .form .button {
         &.added {
             background-color: @color-swatch1;
+            box-shadow: none;
             &:before {
                 content: '\f00c'
             }

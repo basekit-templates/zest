@@ -156,22 +156,22 @@
 
 // 2 Columns
 
-@media @bp-global-large {
 
-    // Product Item
 
-    .menu-item {
-        width: 48%;
-        margin-right: 4%;
+// Product Item
 
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-        &:nth-child(2n-1) {
-            clear: both;
-        }
+.menu-item {
+    width: 48%;
+    margin-right: 4%;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+    &:nth-child(2n-1) {
+        clear: both;
     }
 }
+
 
 
 // 1 Column
@@ -428,6 +428,18 @@
 .menu-item--featured {
     padding: 0;
     background-color: transparent;
+
+    // Item Title
+
+    .item-title {
+        background-color: fade(spin(@color-swatch2, 60), 80%);
+    }
+
+    // Item Price
+
+    .item-price {
+        background-color: fade(spin(@color-swatch2, 60), 20%);
+    }
 }
 
 
@@ -598,7 +610,7 @@
     // ------------------------------
 
     .menu-item {
-
+        margin-bottom: 30px;
     }
 
 
@@ -606,7 +618,7 @@
     // ------------------------------
 
     .section-header {
-        background-color: @color-swatch2;
+        background-color: fade(spin(@color-swatch2, 60), 80%);
         border-bottom: none;
 
     }
@@ -622,6 +634,18 @@
         .section-subtitle {
             color: @color-swatch1;
         }
+
+    // Item Title
+
+    .item-title {
+        background-color: fade(spin(@color-swatch2, 60), 80%);
+    }
+
+    // Item Price
+
+    .item-price {
+        background-color: fade(spin(@color-swatch2, 60), 20%);
+    }
 }
 
 
@@ -668,36 +692,3 @@
 
 
 
-
-
-// ---------------------------------
-// Columns variations
-// ---------------------------------
-
-
-
-
-// All Columns
-// ------------------------------
-
-
-.responsivecolumns {
-    .menu-items, .menu-list {
-        display: block;
-    }
-
-    .menu-item {
-        width: auto;
-        border-right: none;
-
-    }
-
-    .widget[data-name="menusections"] + .widget[data-name="menu"] {
-        margin-top: 0;
-    }
-
-    .menusections-list {
-        padding: 0;
-        background: transparent;
-    }
-}

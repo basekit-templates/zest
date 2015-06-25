@@ -2,10 +2,22 @@
 $( ".widget__extendednavigation" ).addClass( "closed" );
 
 $( ".extendednavigation__navigation-toggle" ).click(function() {
-	$( ".widget__extendednavigation" ).toggleClass( "open" ).toggleClass( "closed" );
-
+	$( ".widget__extendednavigation" ).toggleClass( "open" );
     $( "body" ).toggleClass( "navigation--open" );
 });
+
+
+
+$('.navigation-body').click(function(e) {
+    if (e.target == this) {
+        $( ".widget__extendednavigation" ).removeClass( "open" );
+        $( "body" ).removeClass( "navigation--open" );
+    }
+});
+
+
+
+
 
 // Togglse class open to display/hide folders
 

@@ -16,11 +16,6 @@
     clear: both;
     margin-bottom: 0;
     position: relative;
-    margin-top: -1px;
-
-
-
-
 
 
 
@@ -143,7 +138,11 @@
 
 
     .button--pagination:not(.icon) {
-
+        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+        height: 2em;
+        min-width: 2em;
+        text-align: center;
+        line-height: 2em;
     }
 
 
@@ -152,32 +151,26 @@
     // Pagination Number Item
     // ------------------------------
     .pagination-item {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
 
-        &:not(.blogpostlist__pagination-item) {
-            @media @bp-global-small {
-                -webkit-flex: 0 1 50%;
-                -ms-flex: 0 1 50%;
-                flex: 0 1 50%;
-                width: 50%;
-            }
-        }
     }
 
     .pagination-item.current {
-        -webkit-flex: 2 1 auto;
-        -ms-flex: 2 1 auto;
-        flex: 2 1 auto;
-        @media @bp-global-small {
-            -webkit-flex: 1 1 50%;
-            -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-        }
+
+
         .button--pagination {
             background: @color-swatch2;
-            color: @font-swatch5-color;
+            color: @color-swatch1;
         }
     }
+}
+
+
+
+
+// Ecom Products List Pagination List
+// ----------------------------------
+
+
+.ecomproductslist__pagination-list {
+    text-align: right;
 }

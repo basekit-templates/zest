@@ -34,8 +34,8 @@
 	&, p, h2, h3, a, span .socialicons__social-name {
 		color: fade(@font-swatch5-color, 70%);
 		font-family: @font-swatch5-font-family;
-		font-size: 16px;
-		line-height: 1.5;
+		font-size: 14px;
+		line-height: 1.4;
 		padding-bottom: 0;
 
 		@media @mobile {
@@ -122,15 +122,22 @@
 	&:before {
 		content: '\f003';
 		font-family: 'FontAwesome', sans-serif;
-		color: contrast(@color-swatch7, #000, #fff);
 		margin-right: 0.5em;
-		font-size: 1em;
 		display: inline-block;
 		vertical-align: middle;
+		color: @font-swatch7-color;
+		background-color: fade(@font-swatch5-color, 10%);
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		border-radius: 50px;
+		text-align: center;
+	}
 
-		@media @mobile {
-			font-size: 1.2em;
-		}
+	&:hover:before {
+		background-color: @color-swatch2;
+		color: @color-swatch1;
 	}
 }
 
@@ -153,24 +160,22 @@
 		&:before {
 			content: '\f095';
 			font-family: 'FontAwesome', sans-serif;
-			color: contrast(@color-swatch7, #000, #fff);
 			margin-right: 0.5em;
-			font-size: 1em;
 			display: inline-block;
 			vertical-align: middle;
-
-			@media @mobile {
-				font-size: 1.2em;
-			}
+			color: @font-swatch7-color;
+			background-color: fade(@font-swatch5-color, 10%);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			border-radius: 50px;
+			text-align: center;
 		}
 
-		@media @mobile {
-			background-color: transparent;
-			letter-spacing: 0;
-			font-size: inherit;
-			line-height: inherit;
-			padding: 0;
-			color: @color-swatch7;
+		&:hover:before {
+			background-color: @color-swatch2;
+			color: @color-swatch1;
 		}
 	}
 }

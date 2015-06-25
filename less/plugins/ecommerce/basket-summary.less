@@ -1,6 +1,6 @@
-// -------------------------------------------------------
+// ---------------------------------------------------------
 // Zest Template: CSS > Plugins > Ecommerce > Basket Summary
-// -------------------------------------------------------
+// ---------------------------------------------------------
 
 
 // ------------------------------
@@ -20,6 +20,8 @@
 
 
 .summary-title {
+    margin-bottom: 1em;
+
     @media @bp-global-medium {
         font-size: bkscale(@font-swatch2-font-size, 0.9);
         line-height: bkscale(@font-swatch2-line-height, 0.9);
@@ -39,10 +41,10 @@
 
 
 .summary-table {
-    border-collapse: separate;
-    border-spacing: 0 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
     width: 100%;
-    margin: 0;
+    margin: 0 0 30px 0;
 
 
 
@@ -69,7 +71,7 @@
 
     .table-row--heading {
         .cell {
-            padding-bottom: 1em;
+            padding-bottom: 1.6em;
             font-family: @font-swatch1-font-family;
             font-size: bkscale(@font-swatch5-font-size, .82);
 
@@ -86,9 +88,9 @@
     // ------------------------------
 
 
-    .table-row:not(.table-row--heading):not(.table-row--order-total) {
+    .table-row:not(.table-row--order-total) {
         .cell  {
-            background-color: @color-swatch2;
+            border-bottom: 1px solid fade(@color-swatch5, 6%);
         }
     }
 
@@ -101,7 +103,6 @@
 
     .cell--image {
         width: 126px;
-        padding-left: 10px;
     }
 
 
@@ -127,6 +128,7 @@
 
     .summary-item-title  {
         font-family: @font-swatch1-font-family;
+        font-weight: @font-swatch1-font-weight;
         font-size: @font-swatch4-font-size;
     }
 
@@ -157,7 +159,12 @@
 
     .cell--total, .cell--price {
         text-align: right;
-        padding: 0 16px;
+        padding: 0 0 0 10px;
+        font-family: @font-swatch1-font-family;
+
+        p {
+            font-size: 16px;
+        }
     }
 
 
@@ -175,6 +182,15 @@
 
 
 
+    // Cell Image
+    // ------------------------------
+
+    .cell--image {
+        width: 96px;
+    }
+
+
+
     // Cell Image Item Link
     // ------------------------------
 
@@ -183,18 +199,17 @@
         width: 100px;
         height: 100px;
         display: block;
-        line-height: 80px;
+        line-height: 100px;
         background-position: -100%;
         background-color: #fff;
-        padding: 10px;
 
         // Image
 
         .image {
             display: inline-block;
             vertical-align: middle;
-            max-width: 80px;
-            max-height: 80px;
+            max-width: 100px;
+            max-height: 100px;
         }
     }
 
@@ -224,18 +239,52 @@
 
 .quantity-wrap {
     width: 100%;
-    height: 30px;
-    line-height: 30px;
+    height: 26px;
+    line-height: 26px;
     font-size: 16px;
     background-color: transparent;
 
     // Button Quantity
 
     .button--quantity {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
         text-align: center;
+        font-size: 12px;
+        position: relative;
+        text-indent: -150%;
+        overflow: hidden;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+
+        &:after {
+            font-family: 'FontAwesome';
+            text-indent: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            background-color: fade(@color-swatch5, 10%);
+            border-radius: 15px;
+        }
+
+        &.quantity-minus:after {
+            content: "\f068";
+        }
+
+        &.quantity-plus:after {
+            content: "\f067";
+        }
+
+        &:hover:after {
+            background-color: @color-swatch2;
+            color: @color-swatch1;
+        }
     }
 
     // Quantity Field
@@ -253,6 +302,8 @@
 
 
 .summary-item-title  {
+    font-size: bkscale(@font-swatch4-font-size, 1);
+    line-height: bkscale(@font-swatch4-line-height, 1);
     @media @mobile {
         font-size: bkscale(@font-swatch4-font-size, 0.9) !important;
         line-height: bkscale(@font-swatch4-line-height, 0.8) !important;
@@ -310,16 +361,38 @@
 
         .table-row {
             overflow: hidden;
-            background-color: @color-swatch2;
             margin-bottom: 10px;
             clear: both;
             border-bottom: none;
+        }
+
+        .table-row:not(.table-row--order-total) {
+            padding-bottom: 40px;
+            .cell  {
+                border-bottom: none;
+            }
         }
 
         // Cell Image
 
         .cell--image {
             float: left;
+
+            // Summary Item Links
+
+            .summary-item-link {
+                box-shadow: 0px 11px 10px 0px rgba(213,213,213,0.18), inset 0px 0px 0px 1px rgba(0,0,0,0.05);
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+
+                // Image
+
+                .image {
+                    max-width: 80px;
+                    max-height: 80px;
+                }
+            }
         }
 
         // Item Title
@@ -339,14 +412,19 @@
             }
         }
 
+
+
         // Cell Quantity
 
         .cell.cell--quantity {
-            clear: both;
             padding: 6px 10px;
             text-align: right;
             position: relative;
             width: auto;
+            clear: both;
+            border: 1px solid fade(@font-swatch5-color, 15%) !important;
+            border-bottom: none !important;
+            border-radius: 6px 6px 0 0;
 
             // Pseudo Label - LESS Framework
 
@@ -355,7 +433,7 @@
                 line-height: 30px !important;
                 display: block;
                 position: absolute;
-                right: 90px;
+                right: 110px;
                 top: 6px;
             }
         }
@@ -364,24 +442,31 @@
 
         .quantity-wrap {
             margin: 0 -5px 0 auto;
-            width: 80px;
+            width: 90px;
             max-width: 100%;
-            .button--quantity {
-                border: 5px solid @color-swatch2;
-                line-height: 20px;
-            }
         }
 
         // Cell Price
 
         .cell--price {
             clear: left;
+            border: 1px solid fade(@font-swatch5-color, 15%) !important;
+            border-radius: 0 0 0 6px;
+        }
+
+        // Cell Total
+
+        .cell--total {
+            border: 1px solid fade(@font-swatch5-color, 15%) !important;
+            border-left: none !important;
+            border-radius: 0 0 6px 0;
         }
 
         // Order Total
 
         .order-total {
             text-align: center;
+
         }
 
         // Cell Price, Cell Total
@@ -389,10 +474,11 @@
         .cell--price, .cell--total {
             float: left;
             width: 50%;
-            border-top: 1px solid @color-swatch1 !important;
-            padding: 6px 10px;
-            background-color: darken(@color-swatch1, 8%) !important;
+            text-align: left;
+            padding: 6px 0 6px 10px;
         }
+
+
     }
 }
 

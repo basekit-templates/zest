@@ -1,10 +1,12 @@
 {% extends "layout.twig" %}
 
+
+
 {% block content %}
 
-<section class="page  page--home">
+{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0%','showBtn': true, "buttonText":"LOREM IPSUM"})|raw}}
 
-	{{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0%','showBtn': true, "buttonText":"LOREM IPSUM"})|raw}}
+<section class="page  page--home">
 
 	<!-- Zone Content -->
 	<div class="zone-content">

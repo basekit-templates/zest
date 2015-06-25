@@ -139,7 +139,6 @@ $(document).ready(function() {
 
 
 
-
     $('.product-item').each(function() {
         var href = $(this).find("a").attr("href");
         if(href) {
@@ -147,18 +146,35 @@ $(document).ready(function() {
         }
     });
 
+
+    metaKeyPressed = false;
+
+    $(window).keydown(function(e) {
+        if (e.ctrlKey || e.metaKey) {
+            metaKeyPressed = true;
+        }
+    });
+
+
     $('.product-item').click(function() {
+
         var href = $(this).find("a").attr("href");
         if(href) {
-            window.location = href;
+
+            if (metaKeyPressed == true) {
+                 window.open(href, '_blank');
+            } else {
+                window.location = href;
+            }
         }
+
     });
 
     // Adds variation class when there is only one product image
 
     if($(".ecomproduct__product-gallery").length == 0)
     {
-       $(".ecomproduct__product-image").addClass("one-image");
+       $("body").addClass("product--one-image");
     }
 
 
@@ -188,3 +204,53 @@ $(document).ready(function() {
 
 
 });
+
+
+
+$( ".ecombasket__basket-toggle" ).click(function() {
+    $( "body" ).toggleClass( "basket--open" );
+});
+
+
+
+$('.basket-body').click(function(e) {
+    if (e.target == this) {
+        $( "body" ).removeClass( "basket--open" );
+        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    }
+});
+
+
+
+
+
+$( ".search-toggle" ).click(function() {
+    $( "body" ).addClass( "search--open" );
+});
+
+$('.search-overlay').click(function(e) {
+    if (e.target == this) {
+         $( "body" ).removeClass( "search--open" );
+    }
+});
+
+
+$('.navigation-body').click(function(e) {
+    if (e.target == this) {
+        $( ".widget__extendednavigation" ).removeClass( "open" );
+        $( "body" ).removeClass( "navigation--open" );
+    }
+});
+
+
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        $( ".widget__extendednavigation" ).removeClass( "open" );
+        $( "body" ).removeClass( "navigation--open" );
+        $( "body" ).removeClass( "search--open" );
+        $( "body" ).removeClass( "basket--open" );
+        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    }
+};
