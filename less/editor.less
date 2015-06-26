@@ -25,9 +25,10 @@ body.edit-mode {
 
     // Navigation
     // ------------------------------
-    @media @bp-global-small {
-        .widget[data-name="extendednavigation"] {
-            .bk-overlay {
+
+    .widget[data-name="extendednavigation"] {
+        .bk-overlay {
+            @media @bp-global-small {
                 position: fixed;
                 top: 0;
                 right: 0;
@@ -39,8 +40,9 @@ body.edit-mode {
             }
         }
     }
+
     .navigation-toggle:hover {
-        background-color: transparent;
+        background-color: @color-swatch2;
         box-shadow: none;
     }
 }
