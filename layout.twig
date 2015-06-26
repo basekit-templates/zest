@@ -6,10 +6,15 @@
 
 	<body class="{{ page.backgroundClass }} no-touch">
 
+
+
+
 		{% include "includes/header.twig" %}
 
 		<div class="template-content">
-
+		{% if app.mode != 'published' and app.mode != 'site-preview' %}
+		<p>You should see me only in the Editor's edit mode!</p>
+	{% endif %}
 
 			<div class="container">
 			{% if plugins.ecommerce.store.live %}
