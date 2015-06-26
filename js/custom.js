@@ -132,8 +132,12 @@ $(document).ready(function() {
 
 
 
+    var publishedmode = false;
+    // Edit mode test
 
-
+     if($("body.edit-mode").length == 0) {
+        publishedmode = true;
+     }
 
 
 
@@ -203,54 +207,59 @@ $(document).ready(function() {
 
 
 
-});
 
 
 
-$( ".ecombasket__basket-toggle" ).click(function() {
-    $( "body" ).toggleClass( "basket--open" );
-});
+
+    $( ".ecombasket__basket-toggle" ).click(function() {
+        $( "body" ).toggleClass( "basket--open" );
+    });
 
 
 
-$('.basket-body').click(function(e) {
-    if (e.target == this) {
-        $( "body" ).removeClass( "basket--open" );
-        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    $('.basket-body').click(function(e) {
+        if (e.target == this) {
+            $( "body" ).removeClass( "basket--open" );
+            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+        }
+    });
+
+
+    if(publishedmode==true) {
+        $( ".search-toggle" ).click(function() {
+            $( "body" ).addClass( "search--open" );
+        });
+
+        $('.search-overlay').click(function(e) {
+            if (e.target == this) {
+                 $( "body" ).removeClass( "search--open" );
+            }
+        });
     }
+
+
+
+
+
+    $('.navigation-body').click(function(e) {
+        if (e.target == this) {
+            $( ".widget__extendednavigation" ).removeClass( "open" );
+            $( "body" ).removeClass( "navigation--open" );
+        }
+    });
+
+
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            $( ".widget__extendednavigation" ).removeClass( "open" );
+            $( "body" ).removeClass( "navigation--open" );
+            $( "body" ).removeClass( "search--open" );
+            $( "body" ).removeClass( "basket--open" );
+            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+        }
+    };
+
+
 });
-
-
-
-
-
-$( ".search-toggle" ).click(function() {
-    $( "body" ).addClass( "search--open" );
-});
-
-$('.search-overlay').click(function(e) {
-    if (e.target == this) {
-         $( "body" ).removeClass( "search--open" );
-    }
-});
-
-
-$('.navigation-body').click(function(e) {
-    if (e.target == this) {
-        $( ".widget__extendednavigation" ).removeClass( "open" );
-        $( "body" ).removeClass( "navigation--open" );
-    }
-});
-
-
-
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        $( ".widget__extendednavigation" ).removeClass( "open" );
-        $( "body" ).removeClass( "navigation--open" );
-        $( "body" ).removeClass( "search--open" );
-        $( "body" ).removeClass( "basket--open" );
-        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-    }
-};
