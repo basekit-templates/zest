@@ -67,9 +67,9 @@
        "title": "Arvo, PT Sans",
         "font1": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "24px",
+            "font-size": "26px",
             "font-weight": "700",
-            "line-height": "33px",
+            "line-height": "35px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
