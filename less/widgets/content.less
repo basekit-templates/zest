@@ -110,10 +110,15 @@
 		box-shadow: inset 0px -1px 0px 0px @color-swatch2;
 		display: inline-block;
 		line-height: 1.5;
+		-webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
 		&:hover {
 			text-decoration: none;
-			color: @color-swatch2;
-			box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+			box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
 		}
 	}
 
