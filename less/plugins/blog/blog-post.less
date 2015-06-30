@@ -29,6 +29,9 @@
     .post-image {
         position: relative;
         top: 16px;
+        @media @mobile {
+            top: 0;
+        }
     }
 
 
@@ -114,10 +117,15 @@
                 font-size: bkscale(@font-swatch1-font-size, 0.9);
                 line-height: bkscale(@font-swatch1-line-height, 0.9);
             }
+
             @media @bp-global-small {
                 font-size: bkscale(@font-swatch1-font-size, 0.8);
                 line-height: bkscale(@font-swatch1-line-height, 0.8);
                 padding: 15px 20px;
+            }
+
+            @media @mobile {
+                background-color: @color-swatch2;
             }
         }
 
