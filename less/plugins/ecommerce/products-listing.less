@@ -24,6 +24,41 @@
 
 
 
+// Form
+// ------------------------------
+
+
+.ecomproductslist__form {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    .fieldset--filters {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .fieldset--search {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+
 // Products List Fieldset Filters
 // ------------------------------
 
@@ -176,9 +211,19 @@
 
 
 .ecomproductslist__fieldset--search {
-    display: none;
+    .form-group {
+        margin: 0;
+        display: block;
+    }
+    .input--search, .button--submit {
+        display: none;
+    }
+    .button--clear {
+        display: block;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
 }
-
 
 
 
