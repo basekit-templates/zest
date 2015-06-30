@@ -202,11 +202,8 @@ textarea {
     font-size:  @font-swatch7-font-size;
     font-weight: @font-swatch7-font-weight;
 
-    @media @bp-global-medium {
+    @media @mobile {
         font-size: bkscale(@font-swatch7-font-size, 0.8);
-    }
-    @media @bp-global-small {
-        font-size: bkscale(@font-swatch7-font-size, 0.7);
     }
 
     &:hover, &:focus {

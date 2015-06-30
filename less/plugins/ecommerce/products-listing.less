@@ -119,6 +119,10 @@
         font-family: @font-swatch2-font-family;
         font-size: bkscale(@font-swatch5-font-size, 0.8);
         font-weight: bold;
+
+        @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
     }
 
     // Select Wrap
@@ -242,24 +246,6 @@
         -o-transition: all 0.1s ease-in-out;
         transition: all 0.1s ease-in-out;
 
-        .product-item-details {
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-            -webkit-transform-origin: 0% 0%;
-            -moz-transform-origin: 0% 0%;
-            -o-transform-origin: 0% 0%;
-            -ms-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-            -webkit-transform: scale3d(1, 1, 1);
-            -moz-transform: scale3d(1, 1, 1);
-            -o-transform: scale3d(1, 1, 1);
-            -ms-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-
-        }
-
         .image {
             -webkit-transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
@@ -273,14 +259,6 @@
         }
 
         &:hover {
-            .product-item-details {
-                left: 0;
-                -webkit-transform: scale3d(0, 1, 1);
-                -moz-transform: scale3d(0, 1, 1);
-                -o-transform: scale3d(0, 1, 1);
-                -ms-transform: scale3d(0, 1, 1);
-                transform: scale3d(0, 1, 1);
-            }
 
             .image {
                 -webkit-transform: scale(1.25);
@@ -465,6 +443,7 @@
         background-color: fade(@color-swatch2, 80%);
         color: @color-swatch1;
         padding: 0.6em 14px;
+        line-height: inherit;
     }
 }
 
@@ -478,16 +457,8 @@
     line-height: bkscale(@font-swatch5-line-height, 0.82);
     color: @font-swatch1-color;
     background-color:  darken(fade(@color-swatch1, 90%), 3%);
-    padding: 0.3em 14px;
+    padding: 0.4em 14px;
     display: inline-block;
 }
-
-
-
-
-// ---------------------------------
-// Columns variations
-// ---------------------------------
-
 
 
