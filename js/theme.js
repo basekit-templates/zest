@@ -1,7 +1,14 @@
+// -----------------------------
+// Zest Template: JS > theme.js
+// -----------------------------
+
+
+// ------------------------------
+// Ecom Product Slider
+// ------------------------------
+
+
 function ecomproductSlider() {
-
-
-
     var currentPosition = 0;
     var slide = $( '.ecomproduct__gallery-item' );
     var numberOfSlides = slide.length;
@@ -11,11 +18,7 @@ function ecomproductSlider() {
     $(".ecomproduct__product-gallery").append('<li class="btnprev"></li><li class="btnnext"></li>');
 
 
-
     function slideIt(way) {
-        console.log( "Slides: " + numberOfSlides );
-
-
 
         if (way == "forward") {
             currentPosition++;
@@ -77,11 +80,6 @@ function ecomproductSlider() {
         // Mark previous
         $( slide ).eq(prevPosition).addClass("prev");
 
-        console.log( "way Slide: " + way );
-        console.log( "Current Slide: " + currentPosition );
-        console.log( "prevPosition Slide: " + prevPosition );
-        console.log( "nextPosition Slide: " + nextPosition );
-
 
     }
 
@@ -95,6 +93,8 @@ function ecomproductSlider() {
         slideIt("forward");
     });
 
+    // Swipe left
+
     $( '.ecomproduct__product-gallery' ).on("swipeleft",function(){
         slideIt("forward");
     });
@@ -107,41 +107,28 @@ function ecomproductSlider() {
         slideIt("backward");
     });
 
+    // Swipe right
 
     $( '.ecomproduct__product-gallery' ).on("swiperight",function(){
         slideIt("backward");
     });
 
-
-
-
-
-
-
 }
 
-ecomproductSlider();
 
 
 
+// ---------------------------------
+// Ecom Products List
+// Make while product tile clickable
+// ---------------------------------
 
 
+function ecomProductClickable() {
 
-// Makes the whole ecom product tiles clickable
-$(document).ready(function() {
+    var metaKeyPressed = false;
 
-
-
-    var publishedmode = false;
-    // Edit mode test
-
-     if($("body.edit-mode").length == 0) {
-        publishedmode = true;
-     }
-
-
-
-
+    // Add class to each clickable item
 
     $('.product-item').each(function() {
         var href = $(this).find("a").attr("href");
@@ -151,7 +138,7 @@ $(document).ready(function() {
     });
 
 
-    metaKeyPressed = false;
+    // Detect meta key press
 
     $(window).keydown(function(e) {
         if (e.ctrlKey || e.metaKey) {
@@ -159,12 +146,11 @@ $(document).ready(function() {
         }
     });
 
+    // On click open the page or new window
 
     $('.product-item').click(function() {
-
         var href = $(this).find("a").attr("href");
         if(href) {
-
             if (metaKeyPressed == true) {
                  window.open(href, '_blank');
             } else {
@@ -173,31 +159,75 @@ $(document).ready(function() {
         }
 
     });
+}
+
+
+
+
+// ---------------------------------
+// Ecom One Image detection
+// ---------------------------------
+
+function ecomProductOneImage() {
 
     // Adds variation class when there is only one product image
 
-    if($(".ecomproduct__product-gallery").length == 0)
-    {
+    if($(".ecomproduct__product-gallery").length == 0) {
        $("body").addClass("product--one-image");
     }
+}
 
 
 
-    // Ecom Gallery Scrolling
 
-    $('#ecomscroll').click(function(e) {
-        e.preventDefault();
-        var id = e.target.id;
-        if(id == 'ecomscroll')
-        {
-            $('ul.product-gallery li:first').appendTo('ul.product-gallery');
-        }
-            else
-        {
-            $('ul.product-gallery li:last').prependTo('ul.product-gallery');
+// ---------------------------------
+// Published Mode Detection
+// ---------------------------------
+
+
+var publishedmode = true;
+
+
+if($("body.edit-mode").length > 0) {
+    publishedmode = false;
+}
+
+
+
+
+// ---------------------------------
+// Navigation
+// ---------------------------------
+
+
+
+
+if(publishedmode==true) {
+
+    // Open Navigation Overlay
+
+     $( ".extendednavigation__navigation-toggle" ).click(function() {
+        $( ".widget__extendednavigation" ).toggleClass( "open" );
+        $( "body" ).toggleClass( "navigation--open" );
+    });
+
+    // Close navigation overlay when clicked on the screen
+
+    $('.navigation-body').click(function(e) {
+        if (e.target == this) {
+            $( ".widget__extendednavigation" ).removeClass( "open" );
+            $( "body" ).removeClass( "navigation--open" );
         }
     });
 
+    // Togglse class open to display/hide folders
+
+    $( ".navigation-item.folder .item-name--parent" ).each(function() {
+        $( this ).click(function() {
+            $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
+        });
+    });
+}
 
 
 
@@ -207,15 +237,15 @@ $(document).ready(function() {
 
 
 
+// ---------------------------------
+// Basket Overlay
+// ---------------------------------
 
-
-
+if(publishedmode==true) {
 
     $( ".ecombasket__basket-toggle" ).click(function() {
         $( "body" ).toggleClass( "basket--open" );
     });
-
-
 
     $('.basket-body').click(function(e) {
         if (e.target == this) {
@@ -224,77 +254,71 @@ $(document).ready(function() {
         }
     });
 
-
-    if(publishedmode==true) {
-        $( ".search-toggle" ).click(function() {
-            $( "body" ).addClass( "search--open" );
-        });
-
-        $('.search-overlay').click(function(e) {
-            if (e.target == this) {
-                 $( "body" ).removeClass( "search--open" );
-            }
-        });
-    }
+}
 
 
 
 
 
-    $('.navigation-body').click(function(e) {
-        if (e.target == this) {
-            $( ".widget__extendednavigation" ).removeClass( "open" );
-            $( "body" ).removeClass( "navigation--open" );
-        }
-    });
 
 
 
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
-            $( ".widget__extendednavigation" ).removeClass( "open" );
-            $( "body" ).removeClass( "navigation--open" );
-            $( "body" ).removeClass( "search--open" );
-            $( "body" ).removeClass( "basket--open" );
-            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-        }
-    };
-
-
-
-
-    // Toggles class open to display/hide the whole navigation
-$( ".widget__extendednavigation" ).addClass( "closed" );
-
+// ---------------------------------
+// Search Overlay
+// ---------------------------------
 
 if(publishedmode==true) {
-    $( ".extendednavigation__navigation-toggle" ).click(function() {
-        $( ".widget__extendednavigation" ).toggleClass( "open" );
-        $( "body" ).toggleClass( "navigation--open" );
+
+    // Overlay opens
+
+    $( ".search-toggle" ).click(function() {
+        $( "body" ).addClass( "search--open" );
     });
 
+    // Overlay closes
 
-
-    $('.navigation-body').click(function(e) {
+    $('.search-overlay').click(function(e) {
         if (e.target == this) {
-            $( ".widget__extendednavigation" ).removeClass( "open" );
-            $( "body" ).removeClass( "navigation--open" );
+             $( "body" ).removeClass( "search--open" );
         }
-    });
-
-
-
-
-
-    // Togglse class open to display/hide folders
-
-    $( ".navigation-item.folder .item-name--parent" ).each(function() {
-        $( this ).click(function() {
-                $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
-        });
     });
 }
 
 
-});
+
+
+
+// ---------------------------------
+// Close All Overlays on ESC key
+// ---------------------------------
+
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        $( ".widget__extendednavigation" ).removeClass( "open" );
+        $( "body" ).removeClass( "navigation--open" );
+        $( "body" ).removeClass( "search--open" );
+        $( "body" ).removeClass( "basket--open" );
+        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    }
+};
+
+
+
+
+
+
+
+// ---------------------------------
+// Run it
+// ---------------------------------
+
+
+
+$(document).ready(function() {
+
+    ecomProductClickable();
+
+}); // Document Ready
+
