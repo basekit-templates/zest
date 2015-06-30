@@ -227,11 +227,8 @@ if(publishedmode==true) {
             $( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
         });
     });
+
 }
-
-
-
-
 
 
 
@@ -287,22 +284,32 @@ if(publishedmode==true) {
 
 
 
-
 // ---------------------------------
-// Close All Overlays on ESC key
+// Closing Overlay
 // ---------------------------------
 
+
+function closeEverything() {
+    $( ".widget__extendednavigation" ).removeClass( "open" );
+    $( "body" ).removeClass( "navigation--open" );
+    $( "body" ).removeClass( "search--open" );
+    $( "body" ).removeClass( "basket--open" );
+    $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    $( ".navigation-item.folder .item-name--parent" ).removeClass( "open" );
+}
+
+
+
+// On ESC key
 
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     if (evt.keyCode == 27) {
-        $( ".widget__extendednavigation" ).removeClass( "open" );
-        $( "body" ).removeClass( "navigation--open" );
-        $( "body" ).removeClass( "search--open" );
-        $( "body" ).removeClass( "basket--open" );
-        $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+        closeEverything();
     }
 };
+
+
 
 
 
