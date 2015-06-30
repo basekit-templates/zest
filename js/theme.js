@@ -295,7 +295,7 @@ function closeEverything() {
     $( "body" ).removeClass( "search--open" );
     $( "body" ).removeClass( "basket--open" );
     $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-    $( ".navigation-item.folder .item-name--parent" ).removeClass( "open" );
+    $( ".navigation-item.folder" ).removeClass( "open" );
 }
 
 
