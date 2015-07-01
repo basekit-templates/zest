@@ -6,6 +6,13 @@
     display: none;
 }
 
+.gallery-item.current {
+    .search--open &, basket--open &, .navigation--open & {
+        z-index: auto;
+    }
+}
+
+
 
 // Product Gallery
 // ------------------------------
@@ -157,9 +164,7 @@
             opacity: 1;
         }
 
-        .search--open &, basket--open &, .navigation--open & {
-            z-index: auto;
-        }
+
     }
 
     // Next, Previous
