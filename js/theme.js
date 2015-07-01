@@ -105,6 +105,8 @@ function ecomproductSlider() {
         slideIt("forward");
     });
 
+
+
     // Swipe left
 
     $( '.ecomproduct__product-gallery' ).on("swipeleft",function(){
@@ -252,9 +254,10 @@ if(publishedmode==true) {
 
 if(publishedmode==true) {
 
-    $( ".ecombasket__basket-toggle" ).click(function() {
+    $(document).on("click", ".ecombasket__basket-toggle", function() {
         $( "body" ).toggleClass( "basket--open" );
     });
+
 
     $('.basket-body').click(function(e) {
         if (e.target == this) {
