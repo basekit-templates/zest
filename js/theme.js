@@ -9,13 +9,25 @@
 
 
 function ecomproductSlider() {
+
+    // Clone existing gallery and place it outside the widget
+
+    $( ".ecomproduct__product-gallery" ).clone().prependTo( ".bk-zone" );
+
+    // Remove the original gallery
+
+    $( ".product-article .ecomproduct__product-gallery" ).remove();
+
+    // Create Prev and Next buttons
+
+    $(".ecomproduct__product-gallery").append('<li class="btnprev"></li><li class="btnnext"></li>');
+
     var currentPosition = 0;
     var slide = $( '.ecomproduct__gallery-item' );
     var numberOfSlides = slide.length;
     var nextPosition = 1;
     var prevPosition = numberOfSlides - 1;
 
-    $(".ecomproduct__product-gallery").append('<li class="btnprev"></li><li class="btnnext"></li>');
 
 
     function slideIt(way) {
