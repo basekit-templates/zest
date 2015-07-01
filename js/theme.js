@@ -258,13 +258,17 @@ if(publishedmode==true) {
         $( "body" ).toggleClass( "basket--open" );
     });
 
-
-    $('.basket-body').click(function(e) {
-        if (e.target == this) {
-            $( "body" ).removeClass( "basket--open" );
-            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-        }
+    $(document).on("click", ".basket-body", function() {
+        $('.basket-body').click(function(e) {
+            if (e.target == this) {
+                $( "body" ).removeClass( "basket--open" );
+                $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+            }
+        });
     });
+
+
+
 
 }
 
