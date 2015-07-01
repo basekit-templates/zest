@@ -259,16 +259,11 @@ if(publishedmode==true) {
     });
 
     $(document).on("click", ".basket-body", function() {
-        $('.basket-body').click(function(e) {
-            if (e.target == this) {
-                $( "body" ).removeClass( "basket--open" );
-                $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-            }
-        });
+        if (event.target == this) {
+            $( "body" ).removeClass( "basket--open" );
+            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+        }
     });
-
-
-
 
 }
 
