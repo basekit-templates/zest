@@ -324,9 +324,9 @@ document.onkeydown = function(evt) {
 
 
 $(document).ready(function() {
-
     ecomProductClickable();
     ecomproductSlider();
+    ecomProductOneImage()
 
 }); // Document Ready
 
