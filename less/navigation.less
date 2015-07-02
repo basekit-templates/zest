@@ -176,8 +176,11 @@
 
 // Hover
 
-.navigation-body .navigation-item.selected:not(.open):hover > .item-name {
-
+.navigation-body .navigation-item.selected:not(.open) > .item-name {
+	color: @color-swatch2;
+	@media @bp-global-small {
+		color: fade(@color-swatch1, 70%);
+	}
 }
 
 // Hover
@@ -309,13 +312,6 @@
 
 
 
-// Selected Folder Item
-// ------------------------------
-
-
-.navigation-list--children .navigation-item.selected .item-name {
-	color: @color-swatch7;
-}
 
 
 
