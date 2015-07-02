@@ -77,6 +77,10 @@
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
+		@media @mobile {
+	    	margin-bottom: 10px;
+	    }
+
 		&:first-child {
 			-webkit-box-flex: 0;
 			-moz-box-flex: 0;
@@ -84,9 +88,7 @@
 			-ms-flex: 1 1 auto;
 			flex: 1 1 auto;
 			margin-right: 10px;
-			@media @mobile {
-		    	margin-bottom: 10px;
-		    }
+
 		}
 
 	}
@@ -95,6 +97,9 @@
 
 	.form-group:last-of-type {
 		margin: 0;
+		@media @mobile {
+	    	margin-bottom: 10px;
+	    }
 	}
 
 
