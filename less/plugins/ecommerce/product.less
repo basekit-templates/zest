@@ -142,6 +142,16 @@
         background-color: fade(@color-swatch2, 80%);
         line-height: inherit;
         float: left;
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch1-font-size, 0.8);
+            line-height: bkscale(@font-swatch1-line-height, 0.8);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch1-font-size, 0.7);
+            line-height: bkscale(@font-swatch1-line-height, 0.7);
+        }
     }
 
     // Product Price
@@ -152,6 +162,19 @@
         padding: 0.3em 14px;
         float: left;
         clear: both;
+        font-size: bkscale(@font-swatch3-font-size, 1);
+        line-height: bkscale(@font-swatch3-line-height, 1);
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch3-font-size, 0.8);
+            line-height: bkscale(@font-swatch3-line-height, 0.8);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch3-font-size, 0.7);
+            line-height: bkscale(@font-swatch3-line-height, 0.7);
+        }
+
     }
 
 
