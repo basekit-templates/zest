@@ -258,13 +258,13 @@ if(publishedmode==true) {
         $( "body" ).toggleClass( "basket--open" );
     });
 
-    $(document).on("click", ".basket-body", function() {
-        if (event.target == this) {
+
+    $(document).click(function(event) {
+        if( $(event.target).is(".basket-body") ) {
             $( "body" ).removeClass( "basket--open" );
             $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
         }
-    });
-
+    })
 }
 
 
