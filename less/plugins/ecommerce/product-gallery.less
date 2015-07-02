@@ -7,7 +7,13 @@
 }
 
 .gallery-item.current {
-    .search--open &, basket--open &, .navigation--open & {
+    .search--open &, .basket--open &, .navigation--open & {
+        z-index: auto;
+    }
+}
+
+.basket--open  {
+    .product-gallery .gallery-item.current {
         z-index: auto;
     }
 }
@@ -25,6 +31,7 @@
     height: 0;
     padding-bottom: 60%;
     margin: 0;
+    z-index: 1;
     @media @bp-global-small {
         padding-bottom: 70%;
     }
