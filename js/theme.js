@@ -133,6 +133,23 @@ function ecomproductSlider() {
 
 
 // ---------------------------------
+// Closing Overlay
+// ---------------------------------
+
+
+function closeEverything() {
+    $( ".widget__extendednavigation" ).removeClass( "open" );
+    $( "body, html" ).removeClass( "navigation--open" );
+    $( "body, html" ).removeClass( "search--open" );
+    $( "body, html" ).removeClass( "basket--open" );
+    $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+    $( ".navigation-item.folder" ).removeClass( "open" );
+}
+
+
+
+
+// ---------------------------------
 // Ecom Products List
 // Make while product tile clickable
 // ---------------------------------
@@ -222,15 +239,14 @@ if(publishedmode==true) {
 
      $( ".extendednavigation__navigation-toggle" ).click(function() {
         $( ".widget__extendednavigation" ).toggleClass( "open" );
-        $( "body" ).toggleClass( "navigation--open" );
+        $( "body, html" ).toggleClass( "navigation--open" );
     });
 
     // Close navigation overlay when clicked on the screen
 
     $('.navigation-body').click(function(e) {
         if (e.target == this) {
-            $( ".widget__extendednavigation" ).removeClass( "open" );
-            $( "body" ).removeClass( "navigation--open" );
+            closeEverything();
         }
     });
 
@@ -255,14 +271,13 @@ if(publishedmode==true) {
 if(publishedmode==true) {
 
     $(document).on("click", ".ecombasket__basket-toggle", function() {
-        $( "body" ).toggleClass( "basket--open" );
+        $( "body, html" ).toggleClass( "basket--open" );
     });
 
 
     $(document).click(function(event) {
         if( $(event.target).is(".basket-body") ) {
-            $( "body" ).removeClass( "basket--open" );
-            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+            closeEverything();
         }
     });
 
@@ -270,8 +285,7 @@ if(publishedmode==true) {
 
     $('.ecombasket__basket-body').click(function(e) {
         if (e.target == this) {
-            $( "body" ).removeClass( "basket--open" );
-            $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
+            closeEverything();
         }
     });
 }
@@ -292,34 +306,18 @@ if(publishedmode==true) {
     // Overlay opens
 
     $( ".search-toggle" ).click(function() {
-        $( "body" ).addClass( "search--open" );
+        $( "body, html" ).addClass( "search--open" );
     });
 
     // Overlay closes
 
     $('.search-overlay').click(function(e) {
         if (e.target == this) {
-             $( "body" ).removeClass( "search--open" );
+             closeEverything();
         }
     });
 }
 
-
-
-
-// ---------------------------------
-// Closing Overlay
-// ---------------------------------
-
-
-function closeEverything() {
-    $( ".widget__extendednavigation" ).removeClass( "open" );
-    $( "body" ).removeClass( "navigation--open" );
-    $( "body" ).removeClass( "search--open" );
-    $( "body" ).removeClass( "basket--open" );
-    $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
-    $( ".navigation-item.folder" ).removeClass( "open" );
-}
 
 
 
