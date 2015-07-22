@@ -332,7 +332,15 @@ document.onkeydown = function(evt) {
 
 
 
+// -------------------------------------------------------
+// Ecom Search Toggle
+// Reveal search form when search was perfomed on the page
+// -------------------------------------------------------
 
+
+function ecomProductsListSearchHandler() {
+    $("input#page-zones__main-widgets__productslist__ecomproductslist__search[value='']").parent("body").addClass("ecomSearchActive");
+}
 
 
 
@@ -347,7 +355,8 @@ document.onkeydown = function(evt) {
 $(document).ready(function() {
     ecomProductClickable();
     ecomproductSlider();
-    ecomProductOneImage()
+    ecomProductOneImage();
+    ecomProductsListSearchHandler();
 
 }); // Document Ready
 
