@@ -339,7 +339,11 @@ document.onkeydown = function(evt) {
 
 
 function ecomProductsListSearchHandler() {
-    $("input#page-zones__main-widgets__productslist__ecomproductslist__search[value='']").parent("body").addClass("ecomSearchActive");
+
+    if( $("input#page-zones__main-widgets__productslist__ecomproductslist__search[value='']") ) {
+         $("body").addClass("product--search-active");
+    }
+
 }
 
 
