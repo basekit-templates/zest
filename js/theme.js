@@ -340,7 +340,7 @@ document.onkeydown = function(evt) {
 
 function ecomProductsListSearchHandler() {
 
-    if( $("input#page-zones__main-widgets__productslist__ecomproductslist__search").val() == "" ) {
+    if( $("input#page-zones__main-widgets__productslist__ecomproductslist__search").val() != "" ) {
          $("body").addClass("product--search-active");
     }
 
