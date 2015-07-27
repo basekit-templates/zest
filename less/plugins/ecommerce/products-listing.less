@@ -210,19 +210,27 @@
 // ------------------------------
 
 
+
 .ecomproductslist__fieldset--search {
+    display: none;
 
-    // Form Group
-
-    .form-group {
-        margin: 0;
+    .product--search-active & {
         display: block;
     }
 
-    // Input Search, Button Submit
-
-    .input--search, .button--submit {
-        display: none;
+    .form-body {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
     }
 
     // Button Clear
