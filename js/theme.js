@@ -151,7 +151,7 @@ function closeEverything() {
 
 // ---------------------------------
 // Ecom Products List
-// Make while product tile clickable
+// Make whole product tile clickable
 // ---------------------------------
 
 
@@ -275,7 +275,9 @@ if(publishedmode==true) {
     });
 
 
-    $(document).click(function(event) {
+
+
+    $(document).on("click touchstart", ".basket-body", function(event) {
         if( $(event.target).is(".basket-body") ) {
             closeEverything();
         }
