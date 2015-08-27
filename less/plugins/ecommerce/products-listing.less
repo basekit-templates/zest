@@ -447,8 +447,18 @@
             object-fit: fill;
         }
     }
+}
 
-
+// When no link is present
+.ecomproductslist__product-item-image + .ecomproductslist__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+    display: block;
+    height: 100%;
 }
 
 
