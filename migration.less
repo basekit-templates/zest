@@ -9,6 +9,10 @@
 
 body:not(.row-editing) {
     max-width: calc(~"100% - 200px") !important;
+    
+    @media @tablet {
+        max-width: 100% !important;
+    }
 }
 .row-overlay:before {
     background: transparent !important;
