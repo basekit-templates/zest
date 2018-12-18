@@ -1,0 +1,72 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+// Editor Overrides
+// -----------------------------
+
+
+body:not(.row-editing) {
+    max-width: calc(~"100% - 200px") !important;
+}
+.row-overlay:before {
+    background: transparent !important;
+}
+.row-overlay__edit-button {
+    box-shadow: 0 2px 6px 0 rgba(51,51,51,0.5) !important;
+}
+
+
+// Widget Spacing
+// -----------------------------
+
+@site-container: 1080px;
+@site-margin: auto;
+
+#page-zones__main > .widget:not([data-name="row"]),
+.template-footer {
+    margin-left: @site-margin;
+    margin-right: @site-margin;
+    max-width: @site-container;
+}
+
+#page-zones__main > .widget:not([data-name="row"]) {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+#page-zones__main > [data-name="row"] + .widget:not([data-name="row"]) {
+    margin-top: 30px;
+}
+#page-zones__main > .widget:not([data-name="row"]):first-child {
+    margin-top: 30px;
+}
+
+
+
+// Other Styles
+// -----------------------------
+
+
+.template-header {
+    left: inherit;
+    z-index: 0;
+}
+
+.feature {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

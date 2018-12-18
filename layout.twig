@@ -7,36 +7,17 @@
 	<body class="{{ page.backgroundClass }} no-touch{% if app.mode != 'published' and app.mode != 'site-preview' %} edit-mode{% endif %}
 ">
 
-
-
-
 		{% include "includes/header.twig" %}
 
 		<div class="template-content">
 
-			<div class="container">
-			{% if plugins.ecommerce.store.live %}
-				<div class="ecommerce-bar">
-					<div class="container">
-						<div class="template-search">
-							<button class="search-toggle"></button>
-							<div class="search-overlay">
-								<form class="search-overlay-form" method="GET" action="/store">
-								    <div class="search-overlay-form-group">
-										<input class="input js-display-control" id="page-zones__main-   widgets__ecomproductslistWidget__ecomproductslist__search" name="productlist-search"   placeholder="{{'widgets.ecomproductlist.search_placeholder'|translate('Search term')}}" type="search" value="">
-									    <button class="button  button--submit  ecomproductslist__button" type="submit">Search</button>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="template-basket">{{widget('ecombasket', 'shopbasket', {})|raw}}</div>
-					</div>
-				</div>
-				{% endif %}
-				{% block content %}
-				{% endblock %}
-				{% include "includes/footer.twig" %}
-			</div>
+			<!-- Ecom basket code here !-->
+			
+			{% block content %}
+			{% endblock %}
+			
+			{% include "includes/footer.twig" %}
+			
 		</div>
 
 
