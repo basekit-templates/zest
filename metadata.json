@@ -1,5 +1,6 @@
 {
     "name": "Zest",
+    "versionTenCompatible": 1,
     "widgetVersion":2,
     "thumbnail": "zest.png",
     "screenshot": "zest.png",
