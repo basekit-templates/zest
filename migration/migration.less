@@ -1,129 +1,179 @@
+
 // -----------------------------
 // Migration Styles
 // -----------------------------
 
 
+
+
 #migrated-site {
 
 
-  // Stylseheet overrides
-  // -----------------------------
+    // Stylesheet overrides
+    // -----------------------------
 
 
-  // Template wrapper (replace with corresponding template classes)
-  .main.wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  // Main content spacing (replace with corresponding template class)
-  .main {
-    padding: 0;
-  }
-
-  // Widget overflow to allow 10S overlays to display correctly
-  .widget.content {
-    overflow: inherit;
-  }
-
-
-
-
-  // Migration styles
-  // -----------------------------
-
-
-  // Replace with corresponding template values
-  @container-width: 1200px;
-
-  @spacing__first--desktop: 40px;
-  @spacing__first--tablet:  30px;
-  @spacing__first--mobile:  20px;
-
-  @spacing--other: 30px;
-
-
-  // Applies spacing to widgets to mimic container width
-  .empty-zone,
-  #page-zones__main:empty,
-  #page-zones__main > .widget:not(.row),
-  .row:not(.widget):not(.row--width-no-padding) .row__container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: @container-width;
-    width: 90%;
-  }
-
-
-  // Move spacing to first widget in the main zone (not sections)
-  &.edit #page-zones__main-overlay + .widget:not(.row),
-  #page-zones__main > .widget:not(.row):first-child {
-    margin-top: @spacing__first--desktop;
-
-    @media @tablet {
-      margin-top: @spacing__first--tablet;
-    }
-    @media @mobile {
-      margin-top: @spacing__first--mobile;
-    }
-  }
-
-  &.edit {
-    button.row-overlay__edit-button.js-edit {
-      padding-left: 32px;
+    .edit .template-header {
+        left: 100px;
+        
+        @media @tablet {
+            left: 0;
+        }
     }
 
-    .row-overlay__arrangement-button-group button {
-      padding: 0;
+
+    .edit .ecommerce-bar {
+        right: 100px;
+        
+        @media @tablet {
+            right: 0; 
+        }
+    }
+    
+    
+    .row-edit .ecommerce-bar {
+        display: none;
     }
 
-    .row-overlay__delete-button.js-delete {
-      padding: 0
+
+    .template-content .page {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
     }
-  }
-
-
-  // Move spacing to last widget in the main zone (not sections)
-  #page-zones__main > .widget:not(.row):last-child {
-    margin-bottom: @spacing__first--desktop;
-
-    @media @tablet {
-      margin-bottom: @spacing__first--tablet;
+    
+    
+    [data-widget-type="pagetitle"]:not(.bk-tpl-hidden) {
+        padding-top: 60px;
+        
+        @media @tablet {
+            padding-top: 40px;
+        }
+        
+        + #page-zones__main > .style--light:first-child .row__container,
+        + #page-zones__main > [data-name="responsivecolumns"]:first-child,
+        + #page-zones__main > .widget:not([data-name="row"]):first-child {
+            padding-top: 20px;
+        }
     }
-    @media @mobile {
-      margin-bottom: @spacing__first--mobile;
+
+
+    // body:not(.touch) #page-zones__main > .widget:not([data-name="row"]):first-child .widget-overlay:hover,
+    // #page-zones__main > .widget:not([data-name="row"]):first-child .widget-overlay.hover {
+    //     top: 20px;
+    // }
+    
+    
+    .pagetitle-text {
+        padding-bottom: 0;
     }
-  }
-
-
-  // Add spacing to the top of a widget when it follows a section
-  #page-zones__main > .row + .widget:not(.row) {
-    margin-top: @spacing--other;
-  }
-
-
-  // Remove spacing if widget follows a light section (change to dark if template has a dark BG)
-  #page-zones__main > .row.style--light + .widget:not(.row) {
-    margin-top: 0;
-  }
-
-
-  // Adds spacing to the section when a widget is before it
-  #page-zones__main > .widget:not(.row) + .row {
-    margin-top: @spacing--other;
-
-    &:last-child {
-      margin-bottom: 0;
+    
+    
+    [data-name="row"] .product-item-details {
+        position: relative;
     }
-  }
 
-  #page-zones__template-widgets__extendednavigation-navigationheader {
-    padding-top: 1px;
-  }
 
-} // End of #migrated-site
+    [data-name="row"] .ecomproductslist__title-link {
+        padding-left: 0;
+    }
+    
+    
+    [data-name="row"] .select-wrap:after {
+        right: 8px;
+    }
+    
+    
+    [data-name="row"] .blogpostlist .post-image {
+        top: 0;
+    }
+    
+    
+    [data-name="row"] .blogpostlist__post-title {
+        margin-bottom: 0;
+    }
+    
+    
+    [data-name="row"] .blogpostlist__title-link {
+        padding-left: 0;
+    }
+    
+    
+    [data-name="row"] .social-link {
+        padding: 4px 8px;
+    }
+    
+    
+    [data-name="row"] .social-link:before {
+        display: inline-block;
+        height: auto;
+        margin-right: 6px;
+        width: auto;
+        line-height: inherit;
+    }
+    
+    
+    [data-name="row"] .social-link:hover::before {
+        background-color: transparent;
+    }
 
-.edit .ecommerce-bar {
-  position: absolute;
+
+    [data-name="row"] .gallery__image-link {
+        position: relative;
+    }
+
+
+
+    // Migration styles
+    // -----------------------------
+
+
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container,
+    [data-widget-type="pagetitle"] {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1080px;
+        width: 85%;
+        
+        @media @tablet {
+            width: 95%;
+        }
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    .edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 60px;
+
+        @media @tablet {
+            margin-top: 40px;
+        }
+    }
+    
+    
+    
+    
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 60px;
+        
+        @media @tablet {
+            margin-top: 40px;
+        }
+    }
+
+
+    // Section controls
+    .row-overlay:before,
+    .row-overlay:after {
+        background: none !important;
+    }
 }
