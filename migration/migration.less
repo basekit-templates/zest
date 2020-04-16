@@ -15,8 +15,9 @@
 
     .edit .template-header {
         left: 100px;
+        z-index: 0;
         
-        @media @tablet {
+        @media only screen and (max-width: 930px) {
             left: 0;
         }
     }
@@ -25,14 +26,19 @@
     .edit .ecommerce-bar {
         right: 100px;
         
-        @media @tablet {
-            right: 0; 
+        @media only screen and (max-width: 930px) {
+            right: 0;
         }
     }
     
     
-    .row-edit .ecommerce-bar {
-        display: none;
+    .row-editing,
+    .row-move-mode {
+
+        .ecommerce-bar,
+        .template-header {
+            display: none;
+        }
     }
 
 
@@ -57,12 +63,6 @@
         }
     }
 
-
-    // body:not(.touch) #page-zones__main > .widget:not([data-name="row"]):first-child .widget-overlay:hover,
-    // #page-zones__main > .widget:not([data-name="row"]):first-child .widget-overlay.hover {
-    //     top: 20px;
-    // }
-    
     
     .pagetitle-text {
         padding-bottom: 0;
@@ -156,9 +156,6 @@
             margin-top: 40px;
         }
     }
-    
-    
-    
     
     
     // Move spacing to last widget in the main zone (not sections)
